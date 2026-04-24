@@ -3,372 +3,577 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edwin Brown | Professional Command Dossier</title>
+    <title>Edwin Brown // Operator File 2026-EB-001</title>
     <meta
       name="description"
-      content="Professional command dossier for Edwin Brown, a U.S. Army veteran, operations leader, technical builder, and lifelong learner."
+      content="Classified-style professional dossier for Edwin Brown. U.S. Army veteran, operations leader, technical builder, MSIS candidate."
     />
-    <meta property="og:title" content="Edwin Brown | Professional Command Dossier" />
+    <meta property="og:title" content="Edwin Brown // Operator File" />
     <meta
       property="og:description"
-      content="A cinematic professional dossier for Edwin Brown, focused on leadership, operations, finance, data systems, and technical execution."
+      content="Operator file for Edwin Brown. Veteran, builder, systems thinker. Declassified for public release."
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#071019" />
+    <meta name="theme-color" content="#050403" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="progress-bar" aria-hidden="true"></div>
-    <div class="ambient ambient--one" aria-hidden="true"></div>
-    <div class="ambient ambient--two" aria-hidden="true"></div>
-    <div class="ambient ambient--three" aria-hidden="true"></div>
+    <!-- Boot / access sequence -->
+    <div class="boot" id="boot" aria-hidden="true">
+      <div class="boot__frame">
+        <div class="boot__crosshair" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <pre class="boot__log" id="bootLog"></pre>
+        <p class="boot__hint">click anywhere to skip</p>
+      </div>
+    </div>
 
-    <div class="page-shell">
-      <header class="topbar" data-reveal>
-        <a class="brand" href="#top" aria-label="Edwin Brown dossier home">
-          <span class="brand__seal">EB</span>
-          <span>
-            <span class="brand__kicker">Professional Command Dossier</span>
-            <span class="brand__name">Edwin Brown</span>
+    <!-- Atmosphere layers -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <!-- Classification banner -->
+    <div class="classbar" role="note" aria-label="Classification">
+      <span class="classbar__stamp">UNCLASSIFIED</span>
+      <span class="classbar__sep">//</span>
+      <span>PUBLIC RELEASE AUTHORIZED</span>
+      <span class="classbar__sep">//</span>
+      <span class="classbar__live" id="liveClock">00:00:00 UTC</span>
+      <span class="classbar__sep">//</span>
+      <span>SESSION <span id="sessionId">EB-0000</span></span>
+    </div>
+
+    <div class="shell" id="top">
+      <header class="commandbar" data-reveal>
+        <a class="seal" href="#top" aria-label="Home">
+          <span class="seal__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1" />
+              <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <path d="M20 4 V 36 M4 20 H 36" stroke="currentColor" stroke-width="0.5" />
+              <text x="20" y="24" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="currentColor">EB</text>
+            </svg>
+          </span>
+          <span class="seal__meta">
+            <span class="seal__label">FILE 2026-EB-001</span>
+            <span class="seal__name">Edwin Brown</span>
           </span>
         </a>
 
-        <nav class="topbar__nav" aria-label="Primary navigation">
-          <a href="#profile">Profile</a>
-          <a href="#system">System</a>
-          <a href="#experience">Experience</a>
-          <a href="#work">Work</a>
-          <a href="#credentials">Credentials</a>
+        <nav class="nav" aria-label="Dossier sections">
+          <a href="#profile"><span>01</span>Profile</a>
+          <a href="#doctrine"><span>02</span>Doctrine</a>
+          <a href="#readiness"><span>03</span>Readiness</a>
+          <a href="#record"><span>04</span>Record</a>
+          <a href="#missions"><span>05</span>Missions</a>
+          <a href="#clearance"><span>06</span>Clearance</a>
         </nav>
       </header>
 
-      <main id="top">
-        <section class="hero" aria-label="Professional introduction">
-          <div class="hero__copy" data-reveal>
-            <p class="eyebrow">Veteran operator | systems thinker | technical builder</p>
-            <h1>Edwin Brown</h1>
-            <p class="hero__lead">
-              A mission-focused professional built at the intersection of public
-              administration, finance, data systems, project execution, and
-              disciplined leadership.
-            </p>
-            <p class="hero__body">
-              Edwin combines Army-tested accountability with graduate-level
-              operations training and modern technical fluency. His work style is
-              direct: clarify the mission, build the system, document the proof,
-              and keep improving until the result holds up under pressure.
-            </p>
-
-            <div class="hero__actions" aria-label="Dossier actions">
-              <a class="button button--primary" href="#work">Explore the work</a>
-              <a class="button button--secondary" href="#system">View operating system</a>
-              <button class="button button--ghost" type="button" data-copy-summary>
-                Copy profile summary
-              </button>
+      <main>
+        <!-- SECTION: PROFILE -->
+        <section class="profile" id="profile" aria-label="Subject profile">
+          <div class="profile__meta" data-reveal>
+            <div class="meta-row">
+              <span class="meta-key">CLASSIFICATION</span>
+              <span class="meta-val">UNCLASSIFIED</span>
             </div>
-
-            <div class="hero__metrics" aria-label="Profile highlights">
-              <article class="metric-card">
-                <span class="metric-card__value">12+</span>
-                <span class="metric-card__label">years across military, finance, operations, and technical work</span>
-              </article>
-              <article class="metric-card">
-                <span class="metric-card__value">2026</span>
-                <span class="metric-card__label">MSIS track at Baruch College, strengthening systems and business technology</span>
-              </article>
-              <article class="metric-card">
-                <span class="metric-card__value">40+</span>
-                <span class="metric-card__label">countries visited, strengthening cultural range and global judgment</span>
-              </article>
+            <div class="meta-row">
+              <span class="meta-key">SUBJECT</span>
+              <span class="meta-val">BROWN, EDWIN</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">DESIGNATION</span>
+              <span class="meta-val">VETERAN OPERATOR / SYSTEMS BUILDER</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-key">STATUS</span>
+              <span class="meta-val meta-val--live"><i></i>ACTIVE</span>
             </div>
           </div>
 
-          <aside class="hero__visual" data-reveal>
-            <figure class="portrait-card tilt-card">
-              <img
-                src="assets/edwin-brown-portrait.png"
-                alt="Portrait of Edwin Brown in professional attire"
-              />
-              <figcaption>
-                <span>Professional identity</span>
-                <strong>Operator. Builder. Father. Learner.</strong>
-              </figcaption>
-            </figure>
+          <div class="profile__main">
+            <div class="profile__left" data-reveal>
+              <p class="eyebrow">Subject Profile / Public Release</p>
+              <h1 class="display">
+                <span>Edwin</span>
+                <span class="display__italic">Brown</span>
+              </h1>
+              <p class="lede">
+                A mission-focused professional built at the intersection of public administration, finance, data systems, project execution, and disciplined leadership.
+              </p>
+              <p class="body">
+                Army-tested accountability. Graduate-level operations training. Modern technical fluency. The work style is direct: clarify the mission, build the system, document the proof, and keep refining until the result holds up under pressure.
+              </p>
 
-            <article class="status-card">
-              <div class="status-card__pulse" aria-hidden="true"></div>
-              <div>
-                <p class="panel__eyebrow">Current signal</p>
-                <h2>Building toward higher impact roles in systems, operations, and leadership.</h2>
+              <div class="actions">
+                <a class="btn btn--primary" href="#missions">
+                  <span class="btn__bracket">[</span>
+                  Review mission files
+                  <span class="btn__bracket">]</span>
+                </a>
+                <a class="btn btn--ghost" href="#doctrine">Operating doctrine</a>
+                <button class="btn btn--ghost" type="button" data-copy-summary>
+                  Copy dossier summary
+                </button>
               </div>
-            </article>
-          </aside>
+
+              <dl class="stats">
+                <div class="stat">
+                  <dt>Years of service and practice</dt>
+                  <dd><span data-count="12">00</span><sup>+</sup></dd>
+                  <p>Across military, finance, operations, and technical work.</p>
+                </div>
+                <div class="stat">
+                  <dt>Countries observed in person</dt>
+                  <dd><span data-count="40">00</span><sup>+</sup></dd>
+                  <p>Cultural range. Global judgment. Comfort in unfamiliar rooms.</p>
+                </div>
+                <div class="stat">
+                  <dt>Graduate track</dt>
+                  <dd>2026</dd>
+                  <p>MSIS at Baruch Zicklin. Systems, data, and business technology.</p>
+                </div>
+              </dl>
+            </div>
+
+            <aside class="profile__right" data-reveal>
+              <figure class="idcard">
+                <div class="idcard__tape" aria-hidden="true">PHOTO ON FILE</div>
+                <div class="idcard__frame">
+                  <img
+                    src="assets/edwin-brown-portrait.png"
+                    alt="Portrait of Edwin Brown"
+                    loading="eager"
+                  />
+                  <svg class="idcard__brackets" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 12 V 0 H 12" />
+                    <path d="M88 0 H 100 V 12" />
+                    <path d="M100 88 V 100 H 88" />
+                    <path d="M12 100 H 0 V 88" />
+                  </svg>
+                </div>
+                <figcaption class="idcard__caption">
+                  <div>
+                    <span class="idcard__label">Operator</span>
+                    <strong>Edwin Brown</strong>
+                  </div>
+                  <div>
+                    <span class="idcard__label">Posture</span>
+                    <strong>Builder / Father / Learner</strong>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <div class="signal" aria-label="Live signal">
+                <div class="signal__scope" aria-hidden="true">
+                  <svg viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="55" fill="none" />
+                    <circle cx="60" cy="60" r="40" fill="none" />
+                    <circle cx="60" cy="60" r="25" fill="none" />
+                    <line x1="60" y1="5" x2="60" y2="115" />
+                    <line x1="5" y1="60" x2="115" y2="60" />
+                    <g class="signal__sweep">
+                      <line x1="60" y1="60" x2="60" y2="5" />
+                    </g>
+                    <circle cx="60" cy="60" r="2" class="signal__ping" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="eyebrow">Current Signal</p>
+                  <p class="signal__text">
+                    Building toward higher-impact roles in systems, operations, and leadership. Open to serious conversations.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </section>
 
-        <section class="identity-strip" id="profile" data-reveal aria-label="Identity snapshot">
-          <article>
-            <span>01</span>
-            <h2>Veteran discipline</h2>
+        <!-- SECTION: IDENTITY STAMPS -->
+        <section class="stamps" aria-label="Identity excerpts">
+          <article class="stamp" data-reveal>
+            <div class="stamp__head">
+              <span>01</span>
+              <em>Veteran Discipline</em>
+            </div>
             <p>Composure, accountability, readiness, and mission clarity under pressure.</p>
           </article>
-          <article>
-            <span>02</span>
-            <h2>Operations mind</h2>
+          <article class="stamp" data-reveal>
+            <div class="stamp__head">
+              <span>02</span>
+              <em>Operations Mind</em>
+            </div>
             <p>Process design, coordination, budgeting, controls, and practical execution.</p>
           </article>
-          <article>
-            <span>03</span>
-            <h2>Technical builder</h2>
+          <article class="stamp" data-reveal>
+            <div class="stamp__head">
+              <span>03</span>
+              <em>Technical Builder</em>
+            </div>
             <p>SQL, Python, Flask, GitHub, Vercel, Azure, analytics, and AI-assisted workflows.</p>
           </article>
-          <article>
-            <span>04</span>
-            <h2>Human purpose</h2>
+          <article class="stamp" data-reveal>
+            <div class="stamp__head">
+              <span>04</span>
+              <em>Human Purpose</em>
+            </div>
             <p>Family, legacy, growth, and the refusal to waste hard-earned potential.</p>
           </article>
         </section>
 
-        <section class="section section--split" id="system" aria-label="Operating system">
-          <div class="section__intro" data-reveal>
-            <p class="eyebrow">Operating system</p>
-            <h2>How Edwin turns pressure into forward motion.</h2>
-            <p>
-              The edge is not one skill. It is the combination: structure, evidence,
-              technical curiosity, and a stubborn commitment to finishing the work.
+        <!-- SECTION: DOCTRINE -->
+        <section class="section" id="doctrine" aria-label="Operating doctrine">
+          <header class="section__head" data-reveal>
+            <div class="section__index">02 / 06</div>
+            <p class="eyebrow">Operating Doctrine</p>
+            <h2>Four protocols. Followed every time.</h2>
+            <p class="section__lede">
+              The edge is not one skill. It is the combination: structure, evidence, technical curiosity, and a stubborn commitment to finishing the work.
             </p>
-          </div>
+          </header>
 
-          <div class="process-orbit" data-reveal>
-            <article class="process-card tilt-card">
-              <span>01</span>
-              <h3>Clarify</h3>
-              <p>Define the mission, constraints, audience, deliverable, and evidence standard.</p>
-            </article>
-            <article class="process-card tilt-card">
-              <span>02</span>
-              <h3>Structure</h3>
-              <p>Build the plan, map dependencies, name risks, and make the work traceable.</p>
-            </article>
-            <article class="process-card tilt-card">
-              <span>03</span>
-              <h3>Execute</h3>
-              <p>Move from analysis to artifacts: reports, models, systems, decks, and deployments.</p>
-            </article>
-            <article class="process-card tilt-card">
-              <span>04</span>
-              <h3>Refine</h3>
-              <p>Test the output, correct weak points, document lessons, and raise the standard.</p>
-            </article>
-          </div>
+          <ol class="doctrine" data-reveal>
+            <li>
+              <div class="doctrine__num">
+                <span>PROTOCOL</span>
+                <strong>01</strong>
+              </div>
+              <div class="doctrine__body">
+                <h3>Clarify</h3>
+                <p>Define the mission, constraints, audience, deliverable, and evidence standard. Nothing moves until the target is lit.</p>
+              </div>
+              <div class="doctrine__tick" aria-hidden="true"></div>
+            </li>
+            <li>
+              <div class="doctrine__num">
+                <span>PROTOCOL</span>
+                <strong>02</strong>
+              </div>
+              <div class="doctrine__body">
+                <h3>Structure</h3>
+                <p>Build the plan, map dependencies, name risks, make the work traceable. Sequence that survives contact with reality.</p>
+              </div>
+              <div class="doctrine__tick" aria-hidden="true"></div>
+            </li>
+            <li>
+              <div class="doctrine__num">
+                <span>PROTOCOL</span>
+                <strong>03</strong>
+              </div>
+              <div class="doctrine__body">
+                <h3>Execute</h3>
+                <p>Move from analysis to artifacts. Reports, models, systems, decks, deployments. Something real, every cycle.</p>
+              </div>
+              <div class="doctrine__tick" aria-hidden="true"></div>
+            </li>
+            <li>
+              <div class="doctrine__num">
+                <span>PROTOCOL</span>
+                <strong>04</strong>
+              </div>
+              <div class="doctrine__body">
+                <h3>Refine</h3>
+                <p>Test the output. Correct weak points. Document lessons. Raise the standard for the next run.</p>
+              </div>
+              <div class="doctrine__tick" aria-hidden="true"></div>
+            </li>
+          </ol>
         </section>
 
-        <section class="section capability-section" aria-label="Capability matrix">
-          <div class="section__intro section__intro--wide" data-reveal>
-            <p class="eyebrow">Capability matrix</p>
-            <h2>Not a résumé dump. A working profile of what Edwin can actually do.</h2>
-            <p>
-              Filter the matrix to see how his background translates across leadership,
-              finance, technical systems, and communication.
+        <!-- SECTION: READINESS -->
+        <section class="section" id="readiness" aria-label="Capability readiness">
+          <header class="section__head" data-reveal>
+            <div class="section__index">03 / 06</div>
+            <p class="eyebrow">Capability Readiness</p>
+            <h2>Not a resume dump. A working profile of what the operator can actually do.</h2>
+            <p class="section__lede">
+              Filter the matrix. Read the readiness bars. Every capability is backed by delivered work, not a certificate on a wall.
             </p>
+          </header>
+
+          <div class="filters" data-reveal aria-label="Capability filters">
+            <button class="chip is-active" type="button" data-filter="all">All capabilities</button>
+            <button class="chip" type="button" data-filter="leadership">Leadership</button>
+            <button class="chip" type="button" data-filter="finance">Finance</button>
+            <button class="chip" type="button" data-filter="systems">Systems</button>
+            <button class="chip" type="button" data-filter="communication">Communication</button>
           </div>
 
-          <div class="filterbar" data-reveal aria-label="Capability filters">
-            <button class="filterbar__button is-active" type="button" data-filter="all">All</button>
-            <button class="filterbar__button" type="button" data-filter="leadership">Leadership</button>
-            <button class="filterbar__button" type="button" data-filter="finance">Finance</button>
-            <button class="filterbar__button" type="button" data-filter="systems">Systems</button>
-            <button class="filterbar__button" type="button" data-filter="communication">Communication</button>
-          </div>
-
-          <div class="capability-grid" data-reveal>
-            <article class="capability-card tilt-card" data-category="leadership communication">
-              <p class="card-kicker">Leadership</p>
-              <h3>Mission control</h3>
+          <div class="caps" data-reveal>
+            <article class="cap" data-category="leadership communication">
+              <header>
+                <span class="cap__tag">LEAD-01</span>
+                <h3>Mission control</h3>
+              </header>
               <p>Leads people through ambiguity with clear expectations, direct language, and visible accountability.</p>
-            </article>
-            <article class="capability-card tilt-card" data-category="finance systems">
-              <p class="card-kicker">Finance</p>
-              <h3>Budget discipline</h3>
-              <p>Understands expenditure monitoring, forecasting, reconciliation, controls, and audit-ready reporting.</p>
-            </article>
-            <article class="capability-card tilt-card" data-category="systems">
-              <p class="card-kicker">Data systems</p>
-              <h3>Database fluency</h3>
-              <p>Works with ERDs, SQL analysis, MySQL, schema thinking, data validation, and reporting logic.</p>
-            </article>
-            <article class="capability-card tilt-card" data-category="systems leadership">
-              <p class="card-kicker">Delivery</p>
-              <h3>Technical shipping</h3>
-              <p>Turns ideas into deployed work through GitHub, Vercel, Flask, Python, Azure, and iterative testing.</p>
-            </article>
-            <article class="capability-card tilt-card" data-category="communication leadership">
-              <p class="card-kicker">Communication</p>
-              <h3>Bilingual range</h3>
-              <p>Communicates in English and Spanish, with experience translating complex ideas across people and settings.</p>
-            </article>
-            <article class="capability-card tilt-card" data-category="leadership systems communication">
-              <p class="card-kicker">AI workflow</p>
-              <h3>Force multiplier</h3>
-              <p>Uses AI tools to accelerate research, debugging, document quality, planning, and software iteration.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section--timeline" id="experience" aria-label="Professional experience">
-          <div class="section__intro" data-reveal>
-            <p class="eyebrow">Experience arc</p>
-            <h2>Built through service, finance, public administration, and technical reinvention.</h2>
-            <p>
-              The through-line is responsibility: people, money, operations, evidence,
-              and systems that need to work when theory stops being enough.
-            </p>
-          </div>
-
-          <div class="timeline" data-reveal>
-            <article class="timeline__item">
-              <div class="timeline__number">01</div>
-              <div>
-                <p class="card-kicker">Public-sector operations</p>
-                <h3>Project Manager and Financial Supervisor</h3>
-                <p>Budget planning, expenditure monitoring, reconciliation, internal controls, executive reporting, and multi-site coordination.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="92"></span>
+                <em>READY 92</em>
               </div>
             </article>
-            <article class="timeline__item">
-              <div class="timeline__number">02</div>
-              <div>
+            <article class="cap" data-category="finance systems">
+              <header>
+                <span class="cap__tag">FIN-01</span>
+                <h3>Budget discipline</h3>
+              </header>
+              <p>Expenditure monitoring, forecasting, reconciliation, controls, and audit-ready reporting.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="88"></span>
+                <em>READY 88</em>
+              </div>
+            </article>
+            <article class="cap" data-category="systems">
+              <header>
+                <span class="cap__tag">SYS-01</span>
+                <h3>Database fluency</h3>
+              </header>
+              <p>ERDs, SQL analysis, PostgreSQL, MySQL, schema thinking, validation logic, reporting layer.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="90"></span>
+                <em>READY 90</em>
+              </div>
+            </article>
+            <article class="cap" data-category="systems leadership">
+              <header>
+                <span class="cap__tag">DEL-01</span>
+                <h3>Technical shipping</h3>
+              </header>
+              <p>Turns ideas into deployed work through GitHub, Vercel, Flask, Python, Azure, and iterative testing.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="85"></span>
+                <em>READY 85</em>
+              </div>
+            </article>
+            <article class="cap" data-category="communication leadership">
+              <header>
+                <span class="cap__tag">COM-01</span>
+                <h3>Bilingual range</h3>
+              </header>
+              <p>English and Spanish. Translates complex ideas across people, cultures, and settings.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="95"></span>
+                <em>READY 95</em>
+              </div>
+            </article>
+            <article class="cap" data-category="leadership systems communication">
+              <header>
+                <span class="cap__tag">AI-01</span>
+                <h3>AI as force multiplier</h3>
+              </header>
+              <p>Uses Codex, Claude, Gemini, and ChatGPT to accelerate research, debugging, document quality, and iteration.</p>
+              <div class="cap__bar" role="meter" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">
+                <span data-fill="93"></span>
+                <em>READY 93</em>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SECTION: SERVICE RECORD -->
+        <section class="section" id="record" aria-label="Service record">
+          <header class="section__head" data-reveal>
+            <div class="section__index">04 / 06</div>
+            <p class="eyebrow">Service Record</p>
+            <h2>Built through service, finance, public administration, and technical reinvention.</h2>
+            <p class="section__lede">
+              The through-line is responsibility. People, money, operations, evidence, and systems that need to work when theory stops being enough.
+            </p>
+          </header>
+
+          <ol class="record" data-reveal>
+            <li class="record__item">
+              <div class="record__stamp">
+                <span>ENTRY</span>
+                <strong>04</strong>
+              </div>
+              <div class="record__line">
+                <p class="card-kicker">Public-sector operations</p>
+                <h3>Project Manager &amp; Financial Supervisor</h3>
+                <p>Budget planning, expenditure monitoring, reconciliation, internal controls, executive reporting, multi-site coordination.</p>
+              </div>
+            </li>
+            <li class="record__item">
+              <div class="record__stamp">
+                <span>ENTRY</span>
+                <strong>03</strong>
+              </div>
+              <div class="record__line">
                 <p class="card-kicker">Client-facing finance</p>
                 <h3>Financial Advisor</h3>
-                <p>Client financial data, compliant planning, reporting discipline, pipeline tracking, and cross-functional issue resolution.</p>
+                <p>Client financial data, compliant planning, reporting discipline, pipeline tracking, cross-functional issue resolution.</p>
               </div>
-            </article>
-            <article class="timeline__item">
-              <div class="timeline__number">03</div>
-              <div>
+            </li>
+            <li class="record__item">
+              <div class="record__stamp">
+                <span>ENTRY</span>
+                <strong>02</strong>
+              </div>
+              <div class="record__line">
                 <p class="card-kicker">Military leadership</p>
-                <h3>Non-Commissioned Officer and Team Leader</h3>
+                <h3>Non-Commissioned Officer &amp; Team Leader</h3>
                 <p>High-tempo operations, training, scheduling, documentation, readiness, and accountability in demanding environments.</p>
               </div>
-            </article>
-            <article class="timeline__item">
-              <div class="timeline__number">04</div>
-              <div>
+            </li>
+            <li class="record__item">
+              <div class="record__stamp">
+                <span>ENTRY</span>
+                <strong>01</strong>
+              </div>
+              <div class="record__line">
                 <p class="card-kicker">Global coordination</p>
-                <h3>Account Manager and Navy Liaison</h3>
+                <h3>Account Manager &amp; Navy Liaison</h3>
                 <p>Client coordination, administrative supervision, billing support, and multinational communication.</p>
               </div>
-            </article>
-          </div>
+            </li>
+          </ol>
         </section>
 
-        <section class="section project-section" id="work" aria-label="Selected work">
-          <div class="section__intro section__intro--wide" data-reveal>
-            <p class="eyebrow">Selected work</p>
-            <h2>Artifacts that show the range: analysis, systems, strategy, and deployment.</h2>
-            <p>
-              These projects matter because they show practical learning in motion,
-              not just credentials sitting on paper collecting dust like a sad little trophy shelf.
+        <!-- SECTION: MISSION FILES -->
+        <section class="section" id="missions" aria-label="Mission files">
+          <header class="section__head" data-reveal>
+            <div class="section__index">05 / 06</div>
+            <p class="eyebrow">Mission Files</p>
+            <h2>Artifacts that show the range. Analysis, systems, strategy, and deployment.</h2>
+            <p class="section__lede">
+              These projects matter because they show practical learning in motion, not credentials sitting on paper collecting dust like a sad little trophy shelf.
             </p>
-          </div>
+          </header>
 
-          <div class="project-grid" data-reveal>
-            <article class="project-card project-card--large tilt-card">
-              <p class="card-kicker">Data science</p>
-              <h3>SpaceX Falcon 9 capstone</h3>
-              <p>
-                Built a professional data journey around launch records, exploratory analysis,
-                SQL tasks, mapping, dashboarding, machine learning, reproducibility, and presentation delivery.
-              </p>
-              <div class="tag-row">
-                <span>Python</span>
-                <span>SQL</span>
-                <span>EDA</span>
-                <span>ML</span>
-                <span>Storytelling</span>
+          <div class="missions" data-reveal>
+            <article class="mission mission--feature">
+              <div class="mission__tab">
+                <span>MF-01</span>
+                <em>FEATURED</em>
               </div>
+              <p class="card-kicker">Data science capstone</p>
+              <h3>SpaceX Falcon 9 / Launch outcomes</h3>
+              <p>A full data journey around launch records. Exploratory analysis, SQL tasks, mapping, dashboarding, machine learning, reproducibility, and a presentation that tells the story cleanly.</p>
+              <ul class="tags">
+                <li>Python</li><li>SQL</li><li>EDA</li><li>ML</li><li>Storytelling</li>
+              </ul>
             </article>
-            <article class="project-card tilt-card">
+
+            <article class="mission">
+              <div class="mission__tab"><span>MF-02</span></div>
               <p class="card-kicker">Database systems</p>
-              <h3>ERD and SQL analysis</h3>
-              <p>Conceptual modeling, logical design, normalization thinking, query accuracy, and professor-ready documentation.</p>
-              <div class="tag-row"><span>MySQL</span><span>ERD</span><span>Validation</span></div>
+              <h3>Auto dealership ERD &amp; PostgreSQL build</h3>
+              <p>15-entity logical ERD, full logic document, and a 659-line DDL script with CHECK constraints, indexes, views, and seed data.</p>
+              <ul class="tags"><li>PostgreSQL</li><li>ERD</li><li>DDL</li><li>Validation</li></ul>
             </article>
-            <article class="project-card tilt-card">
+
+            <article class="mission">
+              <div class="mission__tab"><span>MF-03</span></div>
               <p class="card-kicker">Deployment</p>
               <h3>Flask and cloud delivery</h3>
               <p>Static and dynamic applications pushed from concept into hosted environments using GitHub and Vercel.</p>
-              <div class="tag-row"><span>Flask</span><span>Vercel</span><span>GitHub</span></div>
+              <ul class="tags"><li>Flask</li><li>Vercel</li><li>GitHub</li></ul>
             </article>
-            <article class="project-card tilt-card">
+
+            <article class="mission">
+              <div class="mission__tab"><span>MF-04</span></div>
               <p class="card-kicker">Operations strategy</p>
-              <h3>Military community business development</h3>
-              <p>Planning financial services outreach and operational strategy for the Fort Drum community.</p>
-              <div class="tag-row"><span>Strategy</span><span>Outreach</span><span>Execution</span></div>
+              <h3>Fort Drum community outreach</h3>
+              <p>Planning financial services outreach and operational strategy for the Fort Drum military community.</p>
+              <ul class="tags"><li>Strategy</li><li>Outreach</li><li>Execution</li></ul>
             </article>
-            <article class="project-card tilt-card">
+
+            <article class="mission">
+              <div class="mission__tab"><span>MF-05</span></div>
               <p class="card-kicker">AI systems</p>
               <h3>AI-assisted workflow design</h3>
-              <p>Uses Codex, Claude, Gemini, and ChatGPT to speed up analysis, development, testing, and quality review.</p>
-              <div class="tag-row"><span>Prompting</span><span>Automation</span><span>QA</span></div>
+              <p>Codex, Claude, Gemini, and ChatGPT used to speed up analysis, development, testing, and quality review.</p>
+              <ul class="tags"><li>Prompting</li><li>Automation</li><li>QA</li></ul>
             </article>
           </div>
         </section>
 
-        <section class="section section--credentials" id="credentials" aria-label="Credentials and principles">
-          <div class="credential-panel" data-reveal>
-            <p class="eyebrow">Education and credentials</p>
-            <h2>Academic strength with practical ambition.</h2>
-            <div class="credential-grid">
+        <!-- SECTION: CLEARANCE -->
+        <section class="section clearance" id="clearance" aria-label="Clearance and mission statement">
+          <div class="clearance__left" data-reveal>
+            <header class="section__head">
+              <div class="section__index">06 / 06</div>
+              <p class="eyebrow">Clearance &amp; Citations</p>
+              <h2>Academic strength with practical ambition.</h2>
+            </header>
+
+            <div class="creds">
               <article>
+                <p class="card-kicker">Current</p>
                 <h3>MS Information Systems</h3>
-                <p>Baruch College, Zicklin School of Business, CUNY, expected 2026.</p>
+                <p>Baruch College, Zicklin School of Business, CUNY. Expected 2026.</p>
               </article>
               <article>
+                <p class="card-kicker">2024</p>
                 <h3>MPA, Operations Management</h3>
-                <p>John Jay College of Criminal Justice, CUNY, awarded with distinction in 2024.</p>
+                <p>John Jay College of Criminal Justice, CUNY. Awarded with distinction.</p>
               </article>
               <article>
+                <p class="card-kicker">Foundation</p>
                 <h3>Business Administration</h3>
                 <p>Bachelor and associate-level business education grounded in management and operations.</p>
               </article>
               <article>
-                <h3>Certifications and training</h3>
+                <p class="card-kicker">Training</p>
+                <h3>Certifications</h3>
                 <p>Project management, data science, risk, Microsoft Office, insurance, and financial services preparation.</p>
               </article>
             </div>
           </div>
 
-          <aside class="mission-panel" data-reveal>
-            <p class="eyebrow">Personal mission</p>
+          <aside class="brief" data-reveal>
+            <header>
+              <span class="brief__stamp">PERSONAL BRIEF</span>
+              <span class="brief__ref">REF: EB-001-PB</span>
+            </header>
             <blockquote>
-              Build a life that makes the sacrifice worth it, the work visible,
-              and the legacy real.
+              <span class="brief__quote" aria-hidden="true">&ldquo;</span>
+              Build a life that makes the sacrifice worth it, the work visible, and the legacy real.
             </blockquote>
             <p>
-              Edwin’s motivation is not abstract. His children, his family, his
-              education, and his lived experience all push him toward higher
-              standards and long-term impact.
+              The motivation is not abstract. Three sons. A family. A record of service. An education earned the hard way. All of it points toward higher standards and long-term impact.
             </p>
-            <div class="mission-panel__actions">
-              <button class="button button--primary" type="button" data-print>Print dossier</button>
-              <a class="button button--secondary" href="#top">Back to top</a>
+            <div class="brief__actions">
+              <button class="btn btn--primary" type="button" data-print>Print dossier</button>
+              <a class="btn btn--ghost" href="#top">Return to top</a>
             </div>
           </aside>
         </section>
       </main>
 
-      <footer class="footer" data-reveal>
-        <p>Prepared as a public professional dossier for Edwin Brown.</p>
-        <p class="footer__small">Static, fast, responsive, and ready for GitHub or Vercel hosting.</p>
+      <footer class="endfile" data-reveal>
+        <div>
+          <span class="endfile__stamp">END OF FILE</span>
+          <p>Public professional dossier. Compiled for Edwin Brown. Static, fast, and built without a framework step.</p>
+        </div>
+        <div class="endfile__ref">
+          <span>REF</span>
+          <strong>2026-EB-001</strong>
+        </div>
       </footer>
     </div>
 
-    <div class="toast" role="status" aria-live="polite" aria-hidden="true">Profile summary copied.</div>
+    <!-- Toast -->
+    <div class="toast" role="status" aria-live="polite">Dossier summary copied to clipboard</div>
+
+    <!-- Declassify easter egg hint (hidden) -->
+    <div class="decrypt" id="decrypt" aria-hidden="true">
+      <div>
+        <p class="eyebrow">Declassified Addendum</p>
+        <p>Also: three sons, Friday soccer, Spanish-language poetry, and a stubborn belief that discipline plus curiosity beats talent over time.</p>
+        <button type="button" id="decryptClose" class="btn btn--ghost">Seal file</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
