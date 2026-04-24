@@ -7,7 +7,7 @@ Static professional dossier site for Edwin Brown.
 - `index.html`: main dossier page
 - `styles.css`: styling and responsive layout
 - `assets/edwin-brown-portrait.png`: profile portrait used in the hero section
-- `assets/edwin-brown-dossier-github-qr.png`: QR code for the GitHub repo link
+- `assets/edwin-brown-dossier-qr.png`: QR code for the live public dossier URL
 
 ## Publishing
 
@@ -15,7 +15,6 @@ This repo is intentionally build-free so it can be hosted directly from GitHub o
 
 ## Access
 
+- Live dossier: `https://edwin-brown-dossier.vercel.app`
+- QR code: `assets/edwin-brown-dossier-qr.png`
 - GitHub repo: `https://github.com/navybrown1/edwin-brown-dossier`
-- QR code: `assets/edwin-brown-dossier-github-qr.png`
-
-Note: the repo is currently private, so anyone scanning the QR code will need GitHub access to open it.
