@@ -41,6 +41,66 @@
   const bootEl = document.getElementById('boot');
   const bootLogEl = document.getElementById('bootLog');
 
+  const typingAudio = (function () {
+    const AudioCtor = window.AudioContext || window.webkitAudioContext;
+    let ctx = null;
+    let master = null;
+    let armed = false;
+    let tailTime = 0;
+
+    function ensure() {
+      if (!AudioCtor) return false;
+      if (ctx) return true;
+      ctx = new AudioCtor();
+      master = ctx.createGain();
+      master.gain.value = 0.045;
+      master.connect(ctx.destination);
+      return true;
+    }
+
+    function arm() {
+      if (armed) return;
+      if (!ensure()) return;
+      armed = true;
+      if (ctx.state === 'suspended') {
+        ctx.resume().catch(function () {});
+      }
+    }
+
+    function ping(intensity) {
+      if (!armed || !ctx || !master) return;
+      const now = ctx.currentTime;
+      const start = Math.max(now, tailTime + 0.008);
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const filter = ctx.createBiquadFilter();
+
+      filter.type = 'highpass';
+      filter.frequency.value = 850;
+
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(2450 + Math.random() * 700, start);
+      osc.frequency.exponentialRampToValueAtTime(1650 + Math.random() * 260, start + 0.025);
+
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(Math.max(0.01, (intensity || 1) * 0.026), start + 0.003);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.045);
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(master);
+
+      osc.start(start);
+      osc.stop(start + 0.055);
+      tailTime = start;
+    }
+
+    return {
+      arm: arm,
+      ping: ping
+    };
+  })();
+
   const bootLines = [
     { t: '> ', cls: 'k', text: 'establish_secure_channel', delay: 120 },
     { t: '  ', cls: 'd', text: '... handshake / tls ok', delay: 260 },
@@ -90,6 +150,7 @@
         const line = bootLines[i];
         if (charIdx < line.text.length) {
           currentLineNode.textContent += line.text.charAt(charIdx);
+          typingAudio.ping(line.text.charAt(charIdx) === ' ' ? 0.55 : 1);
           charIdx++;
           setTimeout(typeChars, 14 + Math.random() * 14);
         } else {
@@ -104,6 +165,7 @@
 
   function dismissBoot() {
     if (!bootEl) return;
+    try { window.sessionStorage.setItem('dossierBootSeen', '1'); } catch (e) {}
     bootEl.classList.add('is-done');
     setTimeout(function () {
       if (bootEl.parentNode) bootEl.parentNode.removeChild(bootEl);
@@ -112,17 +174,27 @@
 
   // Boot flow
   if (bootEl) {
+    const armAudio = function () { typingAudio.arm(); };
+    try {
+      if (window.sessionStorage.getItem('dossierBootSeen') === '1') {
+        dismissBoot();
+      }
+    } catch (e) {}
+
     // skip on any click or key during boot
     const skip = function () { dismissBoot(); };
+    document.addEventListener('pointerdown', armAudio, { once: true, passive: true });
+    document.addEventListener('keydown', armAudio, { once: true });
     bootEl.addEventListener('click', skip, { once: true });
     document.addEventListener('keydown', function once(e) {
       if (bootEl.classList.contains('is-done')) return;
       skip();
+      armAudio();
       document.removeEventListener('keydown', once);
     });
 
     typeBoot().then(function () {
-      setTimeout(dismissBoot, 420);
+      setTimeout(dismissBoot, 180);
     });
   }
 

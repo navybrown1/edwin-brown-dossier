@@ -579,6 +579,47 @@ p { margin: 0; }
   margin-top: 32px;
 }
 
+.contact-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 28px;
+  padding: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule-strong);
+}
+
+.contact-strip a {
+  min-width: 0;
+  padding: 13px 14px;
+  color: var(--bone);
+  background:
+    linear-gradient(135deg, rgba(255, 118, 49, 0.08), transparent 55%),
+    var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  transition: color 180ms var(--ease), background 180ms var(--ease);
+}
+
+.contact-strip a span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ember);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+.contact-strip a:hover,
+.contact-strip a:focus-visible {
+  color: var(--ember);
+  background: rgba(255, 118, 49, 0.12);
+  outline: none;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1603,15 +1644,38 @@ p { margin: 0; }
   .classbar__live { margin-left: 0; flex-basis: 100%; order: 3; }
 
   .commandbar {
+    position: relative;
+    top: auto;
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
-    padding: 14px;
-    top: 48px;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 24px;
   }
 
-  .nav { justify-content: flex-start; font-size: 10px; }
-  .nav a { padding: 8px 10px; }
+  .seal__mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .seal__label {
+    font-size: 8px;
+  }
+
+  .seal__name {
+    font-size: 19px;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    font-size: 9px;
+  }
+
+  .nav a {
+    justify-content: center;
+    padding: 8px 8px;
+  }
 
   .profile__meta {
     flex-direction: column;
@@ -1623,6 +1687,52 @@ p { margin: 0; }
     padding: 0;
     border-right: 0;
     width: 100%;
+  }
+
+  .profile {
+    padding-top: 12px;
+  }
+
+  .profile__main {
+    gap: 26px;
+  }
+
+  .contact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .profile__right {
+    order: -1;
+    max-width: none;
+  }
+
+  .idcard {
+    padding: 14px;
+    transform: none;
+  }
+
+  .idcard:hover {
+    transform: translateY(-2px);
+  }
+
+  .idcard__frame {
+    aspect-ratio: 16 / 11;
+    background: #123a3d;
+  }
+
+  .idcard__frame img {
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+
+  .signal {
+    grid-template-columns: 74px 1fr;
+    padding: 14px;
+  }
+
+  .signal__scope {
+    width: 74px;
+    height: 74px;
   }
 
   .stats {
