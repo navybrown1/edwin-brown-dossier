@@ -1,0 +1,52 @@
+name: Privacy copy patch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/privacy-copy-patch.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply surgical copy changes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          s = s.replace('Builder / Father / Learner', 'Leader / Builder / Learner')
+
+          s = re.sub(
+              r'The motivation is not abstract\.\s*Three sons\.\s*A family\.\s*A record of service\.\s*An education earned the hard way\.\s*All of it points toward higher standards and long-term impact\.',
+              'The motivation is not abstract. A record of service. An education earned the hard way. A standard built through discipline, resilience, and long-term ambition. All of it points toward higher standards and lasting impact.',
+              s
+          )
+
+          s = re.sub(
+              r'Also:\s*three sons,\s*Friday soccer,\s*Spanish-language poetry,\s*and a stubborn belief that discipline plus curiosity beats talent over time\.',
+              'Also: Spanish-language poetry, disciplined curiosity, and a stubborn belief that systems plus execution beat wasted potential over time.',
+              s
+          )
+
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit change
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Apply privacy-safe public copy updates"
+          git push
