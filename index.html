@@ -3,380 +3,372 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edwin Brown | Professional Dossier</title>
+    <title>Edwin Brown | Professional Command Dossier</title>
     <meta
       name="description"
-      content="Professional dossier for Edwin Brown, a U.S. Army veteran, operations-focused leader, and technical builder."
+      content="Professional command dossier for Edwin Brown, a U.S. Army veteran, operations leader, technical builder, and lifelong learner."
     />
+    <meta property="og:title" content="Edwin Brown | Professional Command Dossier" />
+    <meta
+      property="og:description"
+      content="A cinematic professional dossier for Edwin Brown, focused on leadership, operations, finance, data systems, and technical execution."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#071019" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,500;6..72,700;6..72,800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="topbar__mark">
-          <span class="topbar__badge">EB</span>
-          <div>
-            <p class="topbar__label">Professional Dossier</p>
-            <p class="topbar__title">Edwin Brown</p>
-          </div>
-        </div>
+    <div class="progress-bar" aria-hidden="true"></div>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+    <div class="ambient ambient--three" aria-hidden="true"></div>
 
-        <nav class="topbar__nav" aria-label="Primary">
+    <div class="page-shell">
+      <header class="topbar" data-reveal>
+        <a class="brand" href="#top" aria-label="Edwin Brown dossier home">
+          <span class="brand__seal">EB</span>
+          <span>
+            <span class="brand__kicker">Professional Command Dossier</span>
+            <span class="brand__name">Edwin Brown</span>
+          </span>
+        </a>
+
+        <nav class="topbar__nav" aria-label="Primary navigation">
           <a href="#profile">Profile</a>
+          <a href="#system">System</a>
           <a href="#experience">Experience</a>
           <a href="#work">Work</a>
           <a href="#credentials">Credentials</a>
         </nav>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="hero__copy">
-            <p class="eyebrow">U.S. Army veteran | father | mission-driven operator</p>
+      <main id="top">
+        <section class="hero" aria-label="Professional introduction">
+          <div class="hero__copy" data-reveal>
+            <p class="eyebrow">Veteran operator | systems thinker | technical builder</p>
             <h1>Edwin Brown</h1>
             <p class="hero__lead">
-              Operations-focused leader with hands-on depth across public
-              administration, finance, project delivery, data systems, and
-              technical execution.
+              A mission-focused professional built at the intersection of public
+              administration, finance, data systems, project execution, and
+              disciplined leadership.
             </p>
             <p class="hero__body">
-              Edwin Brown brings 12+ years of experience spanning military
-              leadership, graduate-level operations training, and modern
-              technical implementation. His work is grounded in accountability,
-              documentation, and disciplined follow-through.
+              Edwin combines Army-tested accountability with graduate-level
+              operations training and modern technical fluency. His work style is
+              direct: clarify the mission, build the system, document the proof,
+              and keep improving until the result holds up under pressure.
             </p>
 
-            <div class="hero__actions">
-              <a class="button button--primary" href="#experience">View experience</a>
-              <a class="button button--secondary" href="#work">See selected work</a>
+            <div class="hero__actions" aria-label="Dossier actions">
+              <a class="button button--primary" href="#work">Explore the work</a>
+              <a class="button button--secondary" href="#system">View operating system</a>
+              <button class="button button--ghost" type="button" data-copy-summary>
+                Copy profile summary
+              </button>
             </div>
 
-            <div class="hero__stats" aria-label="Profile highlights">
-              <article class="stat">
-                <span class="stat__value">$5M+</span>
-                <span class="stat__label">Budgets managed across public-sector operations</span>
+            <div class="hero__metrics" aria-label="Profile highlights">
+              <article class="metric-card">
+                <span class="metric-card__value">12+</span>
+                <span class="metric-card__label">years across military, finance, operations, and technical work</span>
               </article>
-              <article class="stat">
-                <span class="stat__value">50+</span>
-                <span class="stat__label">Staff supervised across finance and administration</span>
+              <article class="metric-card">
+                <span class="metric-card__value">2026</span>
+                <span class="metric-card__label">MSIS track at Baruch College, strengthening systems and business technology</span>
               </article>
-              <article class="stat">
-                <span class="stat__value">40+</span>
-                <span class="stat__label">Countries visited with a broad global perspective</span>
+              <article class="metric-card">
+                <span class="metric-card__value">40+</span>
+                <span class="metric-card__label">countries visited, strengthening cultural range and global judgment</span>
               </article>
             </div>
           </div>
 
-          <aside class="hero__rail">
-            <figure class="hero__portrait">
+          <aside class="hero__visual" data-reveal>
+            <figure class="portrait-card tilt-card">
               <img
                 src="assets/edwin-brown-portrait.png"
-                alt="Portrait of Edwin Brown in a navy blazer and white shirt"
+                alt="Portrait of Edwin Brown in professional attire"
               />
+              <figcaption>
+                <span>Professional identity</span>
+                <strong>Operator. Builder. Father. Learner.</strong>
+              </figcaption>
             </figure>
 
-            <article class="profile-card">
-              <p class="panel__eyebrow">Command profile</p>
-              <h2>Built for structure, pressure, and accountable delivery.</h2>
-              <ul class="profile-card__list">
-                <li><strong>Bilingual</strong><span>English and Spanish communication</span></li>
-                <li><strong>Graduate-trained</strong><span>MPA completed, MSIS in progress</span></li>
-                <li><strong>Execution-minded</strong><span>From planning through implementation and refinement</span></li>
-                <li><strong>Cross-functional</strong><span>Operations, finance, analytics, and technical systems</span></li>
-              </ul>
+            <article class="status-card">
+              <div class="status-card__pulse" aria-hidden="true"></div>
+              <div>
+                <p class="panel__eyebrow">Current signal</p>
+                <h2>Building toward higher impact roles in systems, operations, and leadership.</h2>
+              </div>
             </article>
           </aside>
         </section>
 
-        <section class="signal-grid" id="profile" aria-label="Core capabilities">
-          <article class="signal-card">
-            <p class="signal-card__eyebrow">Operations</p>
-            <h2>Program coordination with disciplined process control.</h2>
-            <p>
-              Experience spanning administrative leadership, resource planning,
-              internal coordination, and multi-site execution.
-            </p>
+        <section class="identity-strip" id="profile" data-reveal aria-label="Identity snapshot">
+          <article>
+            <span>01</span>
+            <h2>Veteran discipline</h2>
+            <p>Composure, accountability, readiness, and mission clarity under pressure.</p>
           </article>
-
-          <article class="signal-card">
-            <p class="signal-card__eyebrow">Finance</p>
-            <h2>Budget visibility, controls, and reporting discipline.</h2>
-            <p>
-              Background in expenditure monitoring, forecasting, reconciliation,
-              client-facing financial work, and audit-ready practices.
-            </p>
+          <article>
+            <span>02</span>
+            <h2>Operations mind</h2>
+            <p>Process design, coordination, budgeting, controls, and practical execution.</p>
           </article>
-
-          <article class="signal-card">
-            <p class="signal-card__eyebrow">Systems</p>
-            <h2>Technical fluency that supports real business execution.</h2>
-            <p>
-              Works with SQL, MySQL, Python, Flask, GitHub, Vercel, Azure, and
-              AI-assisted workflows to ship practical solutions.
-            </p>
+          <article>
+            <span>03</span>
+            <h2>Technical builder</h2>
+            <p>SQL, Python, Flask, GitHub, Vercel, Azure, analytics, and AI-assisted workflows.</p>
           </article>
-
-          <article class="signal-card">
-            <p class="signal-card__eyebrow">Leadership</p>
-            <h2>Mission focus shaped by military and civilian accountability.</h2>
-            <p>
-              Leads with composure under pressure, direct communication, and a
-              bias toward finishing what matters.
-            </p>
+          <article>
+            <span>04</span>
+            <h2>Human purpose</h2>
+            <p>Family, legacy, growth, and the refusal to waste hard-earned potential.</p>
           </article>
         </section>
 
-        <section class="section-grid section-grid--feature">
-          <article class="panel panel--statement">
-            <p class="panel__eyebrow">Professional identity</p>
-            <h2>Execution rooted in evidence, structure, and responsibility.</h2>
+        <section class="section section--split" id="system" aria-label="Operating system">
+          <div class="section__intro" data-reveal>
+            <p class="eyebrow">Operating system</p>
+            <h2>How Edwin turns pressure into forward motion.</h2>
             <p>
-              Edwin approaches work through clear documentation, reproducible
-              process, careful analysis, and practical outcomes. He is most
-              effective in environments that value discipline, initiative,
-              cross-functional coordination, and measurable results.
+              The edge is not one skill. It is the combination: structure, evidence,
+              technical curiosity, and a stubborn commitment to finishing the work.
             </p>
-            <p>
-              His military background strengthens adaptability and composure.
-              His academic and technical work strengthens rigor, systems
-              thinking, and follow-through.
-            </p>
-          </article>
+          </div>
 
-          <article class="panel panel--list">
-            <p class="panel__eyebrow">Core strengths</p>
-            <h2>Capabilities that travel across sectors and roles.</h2>
-            <ul class="pill-list">
-              <li>Operations management</li>
-              <li>Project coordination</li>
-              <li>Process improvement</li>
-              <li>Organizational strategy</li>
-              <li>Budget controls</li>
-              <li>SQL and database design</li>
-              <li>Cloud deployment</li>
-              <li>AI-assisted workflows</li>
-              <li>Business analysis</li>
-              <li>Executive reporting</li>
-            </ul>
-          </article>
+          <div class="process-orbit" data-reveal>
+            <article class="process-card tilt-card">
+              <span>01</span>
+              <h3>Clarify</h3>
+              <p>Define the mission, constraints, audience, deliverable, and evidence standard.</p>
+            </article>
+            <article class="process-card tilt-card">
+              <span>02</span>
+              <h3>Structure</h3>
+              <p>Build the plan, map dependencies, name risks, and make the work traceable.</p>
+            </article>
+            <article class="process-card tilt-card">
+              <span>03</span>
+              <h3>Execute</h3>
+              <p>Move from analysis to artifacts: reports, models, systems, decks, and deployments.</p>
+            </article>
+            <article class="process-card tilt-card">
+              <span>04</span>
+              <h3>Refine</h3>
+              <p>Test the output, correct weak points, document lessons, and raise the standard.</p>
+            </article>
+          </div>
         </section>
 
-        <section class="section-grid section-grid--experience" id="experience">
-          <article class="panel panel--experience">
-            <p class="panel__eyebrow">Experience snapshot</p>
-            <h2>Leadership shaped by operations, finance, and mission accountability.</h2>
-            <div class="timeline">
-              <div class="timeline__item">
-                <div class="timeline__marker">01</div>
-                <div class="timeline__body">
-                  <h3>Project Manager and Financial Supervisor</h3>
-                  <p>
-                    Led budget planning, expenditure monitoring, reconciliation,
-                    internal controls, and executive reporting for multi-site
-                    public-sector operations.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__marker">02</div>
-                <div class="timeline__body">
-                  <h3>Financial Advisor</h3>
-                  <p>
-                    Worked with client financial data, compliant planning,
-                    pipeline reporting, and cross-functional issue resolution.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__marker">03</div>
-                <div class="timeline__body">
-                  <h3>Non-Commissioned Officer and Team Leader</h3>
-                  <p>
-                    Directed high-tempo operations, training, schedules,
-                    documentation, and accountability in military environments.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__marker">04</div>
-                <div class="timeline__body">
-                  <h3>Account Manager and Navy Liaison</h3>
-                  <p>
-                    Managed client-facing coordination, billing support,
-                    administrative supervision, and multinational communication.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
+        <section class="section capability-section" aria-label="Capability matrix">
+          <div class="section__intro section__intro--wide" data-reveal>
+            <p class="eyebrow">Capability matrix</p>
+            <h2>Not a résumé dump. A working profile of what Edwin can actually do.</h2>
+            <p>
+              Filter the matrix to see how his background translates across leadership,
+              finance, technical systems, and communication.
+            </p>
+          </div>
 
-          <article class="stack">
-            <article class="panel panel--education">
-              <p class="panel__eyebrow">Education</p>
-              <h2>Graduate study backed by high-performance results.</h2>
-              <div class="credential-list">
-                <div class="credential-list__item">
-                  <h3>Master of Science in Information Systems</h3>
-                  <p>Baruch College, Zicklin School of Business, CUNY, expected 2026.</p>
-                </div>
-                <div class="credential-list__item">
-                  <h3>Master of Public Administration</h3>
-                  <p>
-                    Operations Management, John Jay College of Criminal Justice,
-                    CUNY, awarded with distinction in 2024.
-                  </p>
-                </div>
-                <div class="credential-list__item">
-                  <h3>Bachelor of Business Administration</h3>
-                  <p>Business administration with a focus on practical management and strategy.</p>
-                </div>
-                <div class="credential-list__item">
-                  <h3>Associate Degree in Business Management</h3>
-                  <p>Foundation in business systems, organizational coordination, and leadership.</p>
-                </div>
+          <div class="filterbar" data-reveal aria-label="Capability filters">
+            <button class="filterbar__button is-active" type="button" data-filter="all">All</button>
+            <button class="filterbar__button" type="button" data-filter="leadership">Leadership</button>
+            <button class="filterbar__button" type="button" data-filter="finance">Finance</button>
+            <button class="filterbar__button" type="button" data-filter="systems">Systems</button>
+            <button class="filterbar__button" type="button" data-filter="communication">Communication</button>
+          </div>
+
+          <div class="capability-grid" data-reveal>
+            <article class="capability-card tilt-card" data-category="leadership communication">
+              <p class="card-kicker">Leadership</p>
+              <h3>Mission control</h3>
+              <p>Leads people through ambiguity with clear expectations, direct language, and visible accountability.</p>
+            </article>
+            <article class="capability-card tilt-card" data-category="finance systems">
+              <p class="card-kicker">Finance</p>
+              <h3>Budget discipline</h3>
+              <p>Understands expenditure monitoring, forecasting, reconciliation, controls, and audit-ready reporting.</p>
+            </article>
+            <article class="capability-card tilt-card" data-category="systems">
+              <p class="card-kicker">Data systems</p>
+              <h3>Database fluency</h3>
+              <p>Works with ERDs, SQL analysis, MySQL, schema thinking, data validation, and reporting logic.</p>
+            </article>
+            <article class="capability-card tilt-card" data-category="systems leadership">
+              <p class="card-kicker">Delivery</p>
+              <h3>Technical shipping</h3>
+              <p>Turns ideas into deployed work through GitHub, Vercel, Flask, Python, Azure, and iterative testing.</p>
+            </article>
+            <article class="capability-card tilt-card" data-category="communication leadership">
+              <p class="card-kicker">Communication</p>
+              <h3>Bilingual range</h3>
+              <p>Communicates in English and Spanish, with experience translating complex ideas across people and settings.</p>
+            </article>
+            <article class="capability-card tilt-card" data-category="leadership systems communication">
+              <p class="card-kicker">AI workflow</p>
+              <h3>Force multiplier</h3>
+              <p>Uses AI tools to accelerate research, debugging, document quality, planning, and software iteration.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--timeline" id="experience" aria-label="Professional experience">
+          <div class="section__intro" data-reveal>
+            <p class="eyebrow">Experience arc</p>
+            <h2>Built through service, finance, public administration, and technical reinvention.</h2>
+            <p>
+              The through-line is responsibility: people, money, operations, evidence,
+              and systems that need to work when theory stops being enough.
+            </p>
+          </div>
+
+          <div class="timeline" data-reveal>
+            <article class="timeline__item">
+              <div class="timeline__number">01</div>
+              <div>
+                <p class="card-kicker">Public-sector operations</p>
+                <h3>Project Manager and Financial Supervisor</h3>
+                <p>Budget planning, expenditure monitoring, reconciliation, internal controls, executive reporting, and multi-site coordination.</p>
               </div>
             </article>
-
-            <article class="panel panel--awards">
-              <p class="panel__eyebrow">Recognition</p>
-              <h2>Service and performance signals.</h2>
-              <ul class="compact-list">
-                <li>Army Achievement Medal</li>
-                <li>National Defense Service Medal</li>
-                <li>Global War on Terrorism Service Medal</li>
-              </ul>
-            </article>
-          </article>
-        </section>
-
-        <section class="section-grid section-grid--projects" id="work">
-          <article class="panel panel--projects">
-            <p class="panel__eyebrow">Selected work</p>
-            <h2>Projects that connect research, systems thinking, and delivery.</h2>
-            <div class="project-list">
-              <article class="project">
-                <p class="project__tag">Data science</p>
-                <h3>SpaceX Falcon 9 capstone</h3>
-                <p>
-                  Developed a capstone focused on launch data, moving from
-                  research and interpretation into analysis, presentation, and
-                  professional communication.
-                </p>
-              </article>
-              <article class="project">
-                <p class="project__tag">Database systems</p>
-                <h3>Database design and SQL analysis</h3>
-                <p>
-                  Built entity relationship models, structured database designs,
-                  and SQL analysis work that required validation and clear
-                  documentation.
-                </p>
-              </article>
-              <article class="project">
-                <p class="project__tag">Deployment</p>
-                <h3>Cloud-based application delivery</h3>
-                <p>
-                  Used GitHub, Vercel, Python, Flask, and AI tooling to build,
-                  troubleshoot, improve, and ship technical projects from
-                  concept to working deployment.
-                </p>
-              </article>
-            </div>
-          </article>
-
-          <article class="panel panel--metrics">
-            <p class="panel__eyebrow">Execution profile</p>
-            <h2>Professional work that crosses operations and technical systems.</h2>
-            <div class="metric-stack">
-              <div class="metric-stack__item">
-                <span>Project management</span>
-                <strong>Planning, coordination, sequencing, follow-through</strong>
-              </div>
-              <div class="metric-stack__item">
-                <span>Finance and administration</span>
-                <strong>Budget development, controls, forecasting, audit readiness</strong>
-              </div>
-              <div class="metric-stack__item">
-                <span>Data systems</span>
-                <strong>SQL, MySQL, database modeling, ERDs</strong>
-              </div>
-              <div class="metric-stack__item">
-                <span>Technical implementation</span>
-                <strong>Python, Flask, GitHub, Vercel, Azure</strong>
-              </div>
-              <div class="metric-stack__item">
-                <span>AI workflow integration</span>
-                <strong>Codex, Claude, Gemini, ChatGPT</strong>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="section-grid section-grid--closing" id="credentials">
-          <article class="panel panel--credentials">
-            <p class="panel__eyebrow">Certifications and training</p>
-            <h2>Formal development across management, risk, and analytics.</h2>
-            <ul class="pill-list">
-              <li>Google Project Management Professional Certificate</li>
-              <li>IBM Data Science Professional Certificate</li>
-              <li>Certified Project Manager (CPM)</li>
-              <li>Certified Risk Manager (CRM)</li>
-              <li>Microsoft Office Specialist</li>
-              <li>Securities Industry Essentials (SIE)</li>
-              <li>Life Insurance License, New York State</li>
-            </ul>
-          </article>
-
-          <article class="stack">
-            <article class="panel panel--principles">
-              <p class="panel__eyebrow">Operating principles</p>
-              <h2>How he approaches the work.</h2>
-              <div class="principles">
-                <div class="principle">
-                  <h3>Structured thinking</h3>
-                  <p>Break problems down, document clearly, and keep the work traceable.</p>
-                </div>
-                <div class="principle">
-                  <h3>Mission focus</h3>
-                  <p>Prioritize the objective, stay accountable, and finish what matters.</p>
-                </div>
-                <div class="principle">
-                  <h3>Practical adaptability</h3>
-                  <p>Adjust quickly under pressure without losing discipline or direction.</p>
-                </div>
-                <div class="principle">
-                  <h3>Continuous growth</h3>
-                  <p>Stay honest about gaps, keep learning, and convert effort into progress.</p>
-                </div>
+            <article class="timeline__item">
+              <div class="timeline__number">02</div>
+              <div>
+                <p class="card-kicker">Client-facing finance</p>
+                <h3>Financial Advisor</h3>
+                <p>Client financial data, compliant planning, reporting discipline, pipeline tracking, and cross-functional issue resolution.</p>
               </div>
             </article>
+            <article class="timeline__item">
+              <div class="timeline__number">03</div>
+              <div>
+                <p class="card-kicker">Military leadership</p>
+                <h3>Non-Commissioned Officer and Team Leader</h3>
+                <p>High-tempo operations, training, scheduling, documentation, readiness, and accountability in demanding environments.</p>
+              </div>
+            </article>
+            <article class="timeline__item">
+              <div class="timeline__number">04</div>
+              <div>
+                <p class="card-kicker">Global coordination</p>
+                <h3>Account Manager and Navy Liaison</h3>
+                <p>Client coordination, administrative supervision, billing support, and multinational communication.</p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-            <article class="panel panel--mission">
-              <p class="panel__eyebrow">Mission</p>
-              <blockquote>
-                "Driven by purpose, disciplined growth, and a commitment to
-                building a meaningful legacy through education, leadership, and
-                execution."
-              </blockquote>
+        <section class="section project-section" id="work" aria-label="Selected work">
+          <div class="section__intro section__intro--wide" data-reveal>
+            <p class="eyebrow">Selected work</p>
+            <h2>Artifacts that show the range: analysis, systems, strategy, and deployment.</h2>
+            <p>
+              These projects matter because they show practical learning in motion,
+              not just credentials sitting on paper collecting dust like a sad little trophy shelf.
+            </p>
+          </div>
+
+          <div class="project-grid" data-reveal>
+            <article class="project-card project-card--large tilt-card">
+              <p class="card-kicker">Data science</p>
+              <h3>SpaceX Falcon 9 capstone</h3>
               <p>
-                His children remain a major source of motivation. That sense of
-                responsibility shapes the way he approaches work, learning, and
-                long-term impact.
+                Built a professional data journey around launch records, exploratory analysis,
+                SQL tasks, mapping, dashboarding, machine learning, reproducibility, and presentation delivery.
               </p>
+              <div class="tag-row">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>EDA</span>
+                <span>ML</span>
+                <span>Storytelling</span>
+              </div>
             </article>
-          </article>
+            <article class="project-card tilt-card">
+              <p class="card-kicker">Database systems</p>
+              <h3>ERD and SQL analysis</h3>
+              <p>Conceptual modeling, logical design, normalization thinking, query accuracy, and professor-ready documentation.</p>
+              <div class="tag-row"><span>MySQL</span><span>ERD</span><span>Validation</span></div>
+            </article>
+            <article class="project-card tilt-card">
+              <p class="card-kicker">Deployment</p>
+              <h3>Flask and cloud delivery</h3>
+              <p>Static and dynamic applications pushed from concept into hosted environments using GitHub and Vercel.</p>
+              <div class="tag-row"><span>Flask</span><span>Vercel</span><span>GitHub</span></div>
+            </article>
+            <article class="project-card tilt-card">
+              <p class="card-kicker">Operations strategy</p>
+              <h3>Military community business development</h3>
+              <p>Planning financial services outreach and operational strategy for the Fort Drum community.</p>
+              <div class="tag-row"><span>Strategy</span><span>Outreach</span><span>Execution</span></div>
+            </article>
+            <article class="project-card tilt-card">
+              <p class="card-kicker">AI systems</p>
+              <h3>AI-assisted workflow design</h3>
+              <p>Uses Codex, Claude, Gemini, and ChatGPT to speed up analysis, development, testing, and quality review.</p>
+              <div class="tag-row"><span>Prompting</span><span>Automation</span><span>QA</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--credentials" id="credentials" aria-label="Credentials and principles">
+          <div class="credential-panel" data-reveal>
+            <p class="eyebrow">Education and credentials</p>
+            <h2>Academic strength with practical ambition.</h2>
+            <div class="credential-grid">
+              <article>
+                <h3>MS Information Systems</h3>
+                <p>Baruch College, Zicklin School of Business, CUNY, expected 2026.</p>
+              </article>
+              <article>
+                <h3>MPA, Operations Management</h3>
+                <p>John Jay College of Criminal Justice, CUNY, awarded with distinction in 2024.</p>
+              </article>
+              <article>
+                <h3>Business Administration</h3>
+                <p>Bachelor and associate-level business education grounded in management and operations.</p>
+              </article>
+              <article>
+                <h3>Certifications and training</h3>
+                <p>Project management, data science, risk, Microsoft Office, insurance, and financial services preparation.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="mission-panel" data-reveal>
+            <p class="eyebrow">Personal mission</p>
+            <blockquote>
+              Build a life that makes the sacrifice worth it, the work visible,
+              and the legacy real.
+            </blockquote>
+            <p>
+              Edwin’s motivation is not abstract. His children, his family, his
+              education, and his lived experience all push him toward higher
+              standards and long-term impact.
+            </p>
+            <div class="mission-panel__actions">
+              <button class="button button--primary" type="button" data-print>Print dossier</button>
+              <a class="button button--secondary" href="#top">Back to top</a>
+            </div>
+          </aside>
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="footer" data-reveal>
         <p>Prepared as a public professional dossier for Edwin Brown.</p>
+        <p class="footer__small">Static, fast, responsive, and ready for GitHub or Vercel hosting.</p>
       </footer>
     </div>
+
+    <div class="toast" role="status" aria-live="polite" aria-hidden="true">Profile summary copied.</div>
+    <script src="script.js"></script>
   </body>
 </html>
