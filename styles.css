@@ -1249,6 +1249,7 @@ p { margin: 0; }
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 0;
   padding: 32px 24px 24px;
   background: var(--ink);
   border: 1px solid var(--rule-strong);
@@ -1304,7 +1305,40 @@ p { margin: 0; }
 }
 
 .mission p {
-  flex: 1;
+  flex: 0 0 auto;
+}
+
+.mission__proofs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 20px 0 0;
+}
+
+.mission__proofs div {
+  min-height: 106px;
+  padding: 14px;
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.mission__proofs strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.mission__proofs span {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  line-height: 1.65;
+  color: var(--fog);
 }
 
 .tags {
@@ -1625,7 +1659,11 @@ p { margin: 0; }
 
   .missions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .mission--feature { grid-column: span 2; }
+  .mission--feature {
+    grid-column: span 2;
+    grid-row: auto;
+    min-height: 0;
+  }
 
   .clearance {
     grid-template-columns: 1fr;
@@ -1783,6 +1821,10 @@ p { margin: 0; }
 
   .missions { grid-template-columns: 1fr; }
   .mission--feature { grid-column: auto; grid-row: auto; }
+
+  .mission__proofs {
+    grid-template-columns: 1fr;
+  }
 
   .creds { grid-template-columns: 1fr; }
 
