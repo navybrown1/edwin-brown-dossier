@@ -16,10 +16,13 @@ function json(payload, status = 200) {
 
 export default {
   async fetch(request) {
-    if (request.method !== "POST") {
+    const url = new URL(request.url);
+    const shouldRun = request.method === "POST" || url.searchParams.get("run") === "1";
+
+    if (!shouldRun) {
       return json({
         ready: true,
-        message: "Send a POST request to register the Tesla partner account.",
+        message: "Open this endpoint with ?run=1 or send a POST request to register the Tesla partner account.",
         domain: APP_DOMAIN
       });
     }
