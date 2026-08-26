@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veteran Career Tools // Edwin Brown</title>
+    <meta
+      name="description"
+      content="Private offline career-transition tools built and tested by Army retiree Edwin Brown."
+    />
+    <meta property="og:title" content="Veteran Career Tools by Edwin Brown" />
+    <meta
+      property="og:description"
+      content="Practical offline tools for resumes, interviews, applications, and follow-ups."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#050403" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .store-hero { padding: 72px 0 48px; max-width: 920px; }
+      .store-hero h1 { margin: 12px 0 22px; }
+      .store-status {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 12px;
+        border: 1px solid var(--rule-ember);
+        color: var(--ember);
+        font: 700 10px/1 "JetBrains Mono", monospace;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+      .store-status i { width: 7px; height: 7px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 12px var(--ember); }
+      .store-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .store-card { min-height: 470px; }
+      .store-card--bundle { border-color: var(--ember); }
+      .store-price { margin: 10px 0 4px; color: var(--ember); font: 400 58px/1 "Instrument Serif", serif; }
+      .store-price small { font: 500 11px/1 "JetBrains Mono", monospace; letter-spacing: .12em; color: var(--fog); }
+      .store-list { margin: 18px 0 24px; padding: 0; list-style: none; font: 400 11px/1.75 "JetBrains Mono", monospace; color: var(--fog); }
+      .store-list li::before { content: "[+]"; color: var(--ember); margin-right: 8px; }
+      .store-card .btn { margin-top: auto; justify-content: center; width: 100%; }
+      .store-proof { margin: 54px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+      .store-proof article { padding: 20px; background: var(--ink); }
+      .store-proof strong { display: block; margin-bottom: 8px; color: var(--ember); font: 700 10px/1.4 "JetBrains Mono", monospace; letter-spacing: .15em; text-transform: uppercase; }
+      .store-proof p { margin: 0; font-size: 12px; }
+      .store-terms { margin: 28px 0 60px; padding: 24px; border: 1px solid var(--rule); background: var(--ink); }
+      .store-terms h2 { font-size: 28px; margin-bottom: 12px; }
+      .store-terms p { margin: 0 0 9px; font-size: 12px; }
+      @media (max-width: 900px) { .store-grid { grid-template-columns: 1fr; } .store-card { min-height: 0; } .store-proof { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 520px) { .store-proof { grid-template-columns: 1fr; } .store-hero { padding-top: 36px; } }
+    </style>
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="classbar" role="note" aria-label="Store status">
+      <span class="classbar__stamp">PUBLIC RELEASE</span>
+      <span class="classbar__sep">//</span>
+      <span>VETERAN CAREER TOOLS</span>
+      <span class="classbar__sep">//</span>
+      <span>SECURE PAYPAL CHECKOUT</span>
+    </div>
+
+    <div class="shell" id="top">
+      <header class="commandbar">
+        <a class="seal" href="index.html" aria-label="Return to Edwin Brown dossier">
+          <span class="seal__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1" />
+              <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <path d="M20 4 V 36 M4 20 H 36" stroke="currentColor" stroke-width="0.5" />
+              <text x="20" y="24" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="currentColor">EB</text>
+            </svg>
+          </span>
+          <span class="seal__meta">
+            <span class="seal__label">VETERAN-BUILT</span>
+            <span class="seal__name">Career Tools</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Store navigation">
+          <a href="index.html"><span>01</span>Dossier</a>
+          <a href="#tools"><span>02</span>Tools</a>
+          <a href="#delivery"><span>03</span>Delivery</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="store-hero" aria-labelledby="store-title">
+          <div class="store-status"><i></i>Launch pricing active</div>
+          <p class="eyebrow">Built from a real military-to-civilian transition</p>
+          <h1 class="display" id="store-title">
+            <span>Move with</span>
+            <span class="display__italic">a system.</span>
+          </h1>
+          <p class="lede">
+            Private, offline workbooks built by an Army retiree to help veterans turn experience into stronger resumes, sharper interview stories, and a follow-up process that does not lose opportunities.
+          </p>
+          <p class="body">
+            No subscription. No cloud account. Buyer-entered information stays in the browser on the buyer's device unless the buyer exports a backup.
+          </p>
+        </section>
+
+        <section class="section" id="tools" aria-labelledby="tools-title">
+          <header class="section__head">
+            <div class="section__index">02 / 03</div>
+            <p class="eyebrow">Choose the mission kit</p>
+            <h2 id="tools-title">Focused tools. One-time price.</h2>
+          </header>
+
+          <div class="store-grid">
+            <article class="mission store-card">
+              <div class="mission__tab">RESUME + INTERVIEW <em>V1.0</em></div>
+              <h3>Veteran Career Transition Toolkit</h3>
+              <div class="store-price">$19 <small>ONE TIME</small></div>
+              <p>Translate military experience and prepare evidence-based interview stories in one offline workbook.</p>
+              <ul class="store-list">
+                <li>Resume bullet generator</li>
+                <li>STAR story builder</li>
+                <li>Editable saved versions</li>
+                <li>JSON backup and restore</li>
+                <li>Print or save to PDF</li>
+              </ul>
+              <a class="btn btn--primary" href="https://paypal.me/navybrown1/19" target="_blank" rel="noopener noreferrer">Buy securely with PayPal</a>
+            </article>
+
+            <article class="mission store-card">
+              <div class="mission__tab">APPLICATION OPS <em>V1.0</em></div>
+              <h3>Veteran Application Command Center</h3>
+              <div class="store-price">$15 <small>ONE TIME</small></div>
+              <p>Keep applications, deadlines, contacts, and next actions visible without uploading private job-search data.</p>
+              <ul class="store-list">
+                <li>Five live pipeline metrics</li>
+                <li>Search and priority filters</li>
+                <li>Deadline and overdue views</li>
+                <li>JSON and CSV export</li>
+                <li>Safe HTTP(S) link handling</li>
+              </ul>
+              <a class="btn btn--primary" href="https://paypal.me/navybrown1/15" target="_blank" rel="noopener noreferrer">Buy securely with PayPal</a>
+            </article>
+
+            <article class="mission store-card store-card--bundle">
+              <div class="mission__tab">BEST VALUE <em>SAVE $5</em></div>
+              <h3>Veteran Career Launch Bundle</h3>
+              <div class="store-price">$29 <small>ONE TIME</small></div>
+              <p>Both tested tools in one buyer-ready bundle: translate the experience, prepare the story, then run the search.</p>
+              <ul class="store-list">
+                <li>Both complete products</li>
+                <li>Two offline HTML workbooks</li>
+                <li>Quick-start guides</li>
+                <li>Personal-use licenses</li>
+                <li>No recurring fee</li>
+              </ul>
+              <a class="btn btn--primary" href="https://paypal.me/navybrown1/29" target="_blank" rel="noopener noreferrer">Get both with PayPal</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="store-proof" aria-label="Product proof">
+          <article><strong>Offline by design</strong><p>No external asset or network dependency inside either workbook.</p></article>
+          <article><strong>Browser tested</strong><p>Core workflows, storage, backup, exports, and printing were exercised in a current browser.</p></article>
+          <article><strong>Veteran built</strong><p>Created from the author's own Army-to-civilian transition experience.</p></article>
+          <article><strong>Clear limits</strong><p>Organization and preparation tools—not employment placement or a guarantee of outcomes.</p></article>
+        </section>
+
+        <section class="store-terms" id="delivery" aria-labelledby="delivery-title">
+          <p class="eyebrow">Delivery and license</p>
+          <h2 id="delivery-title">What happens after payment</h2>
+          <p>The buyer-ready ZIP is emailed to the payment email after the PayPal payment is confirmed. Payment notifications are monitored for fulfillment.</p>
+          <p>Each purchase includes a personal-use license for one buyer. Redistribution, resale, and public hosting are not included.</p>
+          <p>Because this is a downloadable digital product, buyers should review the description before paying. For a delivery problem, reply to the fulfillment email.</p>
+          <p>These tools do not guarantee interviews, offers, employment, placement, or financial results. Buyers remain responsible for verifying every application and statement.</p>
+        </section>
+      </main>
+
+      <footer class="endfile">
+        <div><span class="endfile__stamp">VETERAN BUILT</span><p>Practical tools for the transition mission.</p></div>
+        <div class="endfile__ref"><span>SELLER</span><strong>Edwin Brown</strong></div>
+      </footer>
+    </div>
+  </body>
+</html>
