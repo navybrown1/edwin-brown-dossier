@@ -60,6 +60,16 @@
               "description": "Both offline veteran career workbooks with quick-start guides and personal-use licenses.",
               "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "29", "availability": "https://schema.org/InStock", "url": "https://edwin-brown-dossier.vercel.app/products.html#tools" }
             }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "Veteran Career Workshop Pack",
+              "description": "Two offline veteran career workbooks, facilitator guide, participant quick-start, and a single-cohort license for up to 25 participants.",
+              "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "149", "availability": "https://schema.org/InStock", "url": "https://edwin-brown-dossier.vercel.app/products.html#workshop" }
+            }
           }
         ]
       }
@@ -102,7 +112,14 @@
       .store-terms { margin: 28px 0 60px; padding: 24px; border: 1px solid var(--rule); background: var(--ink); }
       .store-terms h2 { font-size: 28px; margin-bottom: 12px; }
       .store-terms p { margin: 0 0 9px; font-size: 12px; }
+      .store-org { margin-top: 54px; border-color: var(--ember); }
+      .store-org__grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(240px, .6fr); gap: 28px; align-items: center; }
+      .store-org .store-list { margin-bottom: 0; }
+      .store-org__buy { padding: 22px; border: 1px solid var(--rule-ember); background: var(--black); text-align: center; }
+      .store-org__buy .store-price { margin-top: 0; }
+      .store-org__buy .btn { width: 100%; justify-content: center; }
       @media (max-width: 900px) { .store-grid, .store-preview__grid { grid-template-columns: 1fr; } .store-card { min-height: 0; } .store-proof { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 700px) { .store-org__grid { grid-template-columns: 1fr; } }
       @media (max-width: 520px) { .store-proof { grid-template-columns: 1fr; } .store-hero { padding-top: 36px; } }
     </style>
   </head>
@@ -137,7 +154,7 @@
         <nav class="nav" aria-label="Store navigation">
           <a href="index.html"><span>01</span>Dossier</a>
           <a href="#tools"><span>02</span>Tools</a>
-          <a href="#delivery"><span>03</span>Delivery</a>
+          <a href="#workshop"><span>03</span>Workshop</a>
         </nav>
       </header>
 
@@ -230,6 +247,28 @@
           </div>
         </section>
 
+        <section class="store-terms store-org" id="workshop" aria-labelledby="workshop-title">
+          <div class="store-org__grid">
+            <div>
+              <p class="eyebrow">For veteran-serving organizations</p>
+              <h2 id="workshop-title">Equip one cohort of up to 25 participants.</h2>
+              <p>Run a practical, privacy-conscious career workshop with both offline workbooks, a facilitator guide, participant quick-start, and a bounded single-cohort license.</p>
+              <ul class="store-list">
+                <li>Two tested offline workbooks</li>
+                <li>90-minute facilitator agenda</li>
+                <li>Participant quick-start guide</li>
+                <li>One cohort, up to 25 participants</li>
+                <li>No subscription or cloud account</li>
+              </ul>
+            </div>
+            <div class="store-org__buy">
+              <div class="store-price">$149 <small>ONE TIME</small></div>
+              <p>Buyer-ready ZIP is emailed to the PayPal payment address after payment is confirmed.</p>
+              <a class="btn btn--primary" href="https://paypal.me/navybrown1/149" target="_blank" rel="noopener noreferrer">License a workshop cohort</a>
+            </div>
+          </div>
+        </section>
+
         <section class="store-proof" aria-label="Product proof">
           <article><strong>Offline by design</strong><p>No external asset or network dependency inside either workbook.</p></article>
           <article><strong>Browser tested</strong><p>Core workflows, storage, backup, exports, and printing were exercised in a current browser.</p></article>
@@ -242,7 +281,7 @@
           <h2 id="delivery-title">What happens after payment</h2>
           <p>The buyer-ready ZIP is emailed to the payment email after the PayPal payment is confirmed. Payment notifications are monitored for fulfillment.</p>
           <p>Career counselors, veteran-serving nonprofits, and workshop leaders can request a no-cost review copy at <a href="mailto:edwinbrown.consult@gmail.com?subject=Veteran%20career%20tools%20review%20copy">edwinbrown.consult@gmail.com</a>.</p>
-          <p>Each purchase includes a personal-use license for one buyer. Redistribution, resale, and public hosting are not included.</p>
+          <p>The $15, $19, and $29 purchases include personal-use licenses for one buyer. The $149 Workshop Pack includes one facilitator and one cohort of up to 25 participants. Redistribution beyond the purchased license, resale, and public hosting are not included.</p>
           <p>Because this is a downloadable digital product, buyers should review the description before paying. For a delivery problem, reply to the fulfillment email.</p>
           <p>These tools do not guarantee interviews, offers, employment, placement, or financial results. Buyers remain responsible for verifying every application and statement.</p>
         </section>
